@@ -1,0 +1,10 @@
+drilldown {
+	.highcharts-button rect{
+		 fill: $fground;
+		 stroke: $text;
+	}
+	.highcharts-button text{
+		fill : $text!important;
+	}
+}
+

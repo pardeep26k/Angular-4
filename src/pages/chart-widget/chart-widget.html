@@ -1,0 +1,51 @@
+<ion-card color="grid" *ngIf="isLoadeded">
+  <ion-card-header  color="fground" ion-item class="topHeader" >
+       
+  
+      <ion-title  color="fground" >  {{chart.title}}    </ion-title>
+    <div  item-right *ngIf="!hideOptions && chart.type != 'table' ">
+      <span >
+
+
+      
+       <button ion-button clear [disabled]="state=='edit'" title="Download as File" (click)="downloadChart(chart)">
+         <ion-icon name="document" ></ion-icon> 
+         <ion-icon name="download" ></ion-icon>
+      </button>
+       <button ion-button clear [disabled]="state=='edit'" title="Download as Image" (click)="downloadImage(chart.id,chart.title)">
+        <ion-icon name="image"  ></ion-icon>
+         <ion-icon name="download" ></ion-icon>
+      </button>
+      
+      </span>
+       
+      
+      
+       <button *ngIf="edit" [disabled]="state=='edit'" ion-button clear title="Upload as Image" (click)="uploadImage(chart.id)">
+         <ion-icon name="cloud-upload" ></ion-icon>
+          <ion-icon name="image"  ></ion-icon>
+      </button>
+       <button *ngIf="edit" [disabled]="state=='edit'" ion-button clear title="print" (click)="printChart(chart)">
+         <ion-icon name="print" ></ion-icon>
+         
+      </button>
+      
+      
+    </div>
+    
+    </ion-card-header>
+  <ion-card-content  [ngStyle]="{'height':height+'px'}" [ngClass]="{'table-wrapper': chart.type == 'table'}" >
+  
+    <chart-viewer    id="chart_{{chart.id}}" *ngIf="state=='preview'" [chart]=chart [data]=data [filters]=filters  (cancel)="onCancel()" (renderDone)="onRenderDone($event)" ></chart-viewer>
+    </ion-card-content>
+  <ion-card-header color="fground" >  
+    <social-share   *ngIf="chart.type != 'table'" [url]="shareUrl" side="top"  [disable]="shareDisabled ||  chart.type == 'table'"  (shareClicked)="shareChart(chart.id)"  [media]=  '["facebook","twitter","linkedIn"]' ></social-share>
+  </ion-card-header>  
+</ion-card> 
+  
+
+
+  
+
+
+

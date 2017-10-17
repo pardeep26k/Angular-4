@@ -1,0 +1,28 @@
+  
+<div *ngIf="isLoadeded"  id="chart{{options.id}}">
+<div class="wrapper" >
+<ion-list class="tb-header"  >
+
+	
+<div class="count">{{tableData.length}} records.</div>
+	<ion-item color="fground">
+		<ion-row >
+		<ion-col> </ion-col>
+			<ion-col *ngFor="let column of columns"> {{column}}</ion-col>
+		</ion-row>
+	</ion-item >
+	</ion-list>
+	<ion-list  >
+
+<div class="tb-content " >
+		<ion-item  *ngFor="let d of tableData;let i = index;" color="grid">
+			<ion-row>
+				<ion-col>{{i+1}} </ion-col>
+				<ion-col *ngFor="let c of columns"> {{d[c]}} </ion-col>
+			</ion-row>
+		</ion-item >
+	</div>
+	</ion-list>
+	</div>
+</div>
+  

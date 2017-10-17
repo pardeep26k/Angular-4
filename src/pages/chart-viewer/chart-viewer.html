@@ -1,0 +1,9 @@
+
+    <!--google-chart [data]=chart #chartElem ></google-chart-->
+  
+    <!--div id="chart_{{chart.chartId}}"></div-->
+    <div *ngIf="isLoadeded " class="wrapper" >
+    <drilldown  [options]=chart  *ngIf="chart.type == 'drilldown'" [data]=data (renderDone)="onRenderDone($event)" ></drilldown> 
+        <table-chart  [options]=chart  *ngIf="chart.type == 'table'" [data]=data  [filters]=filters (renderDone)="onRenderDone($event)" > 
+      </table-chart> 
+    </div>

@@ -1,0 +1,10 @@
+ <ion-fab  right bottom  >
+      <button ion-fab mini id="shareBtn" #menu [disabled]="disable" (click)="onShareClick($event)" ><ion-icon name="share" ></ion-icon></button>
+    
+      <ion-fab-list side="top"  >
+          <button ion-fab  (click)="onOptionSelect('#shareBtn')"  *ngIf="media.indexOf('facebook') >=0"  ceiboShare [disabled]="!url || disable"   [facebook]="{u: url}" ><ion-icon name="logo-facebook"  ></ion-icon></button>
+           <button ion-fab  (click)="onOptionSelect('#shareBtn')"  *ngIf="media.indexOf('twitter') >=0" ceiboShare [disabled]="!url || disable"   [twitter]="{url: url}" ><ion-icon name="logo-twitter"  ></ion-icon></button>
+          <button ion-fab   (click)="onOptionSelect('#shareBtn')" *ngIf="media.indexOf('googlePLus') >=0" ceiboShare [disabled]="!url || disable"   [googlePlus]="{url: url}" ><ion-icon name="logo-googleplus"  ></ion-icon></button>
+          <button ion-fab   (click)="onOptionSelect('#shareBtn')" *ngIf="media.indexOf('linkedIn') >=0" ceiboShare [disabled]="!url || disable"   [linkedIn]="{url: url}" ><ion-icon name="logo-linkedin"  ></ion-icon></button>
+          </ion-fab-list>
+    </ion-fab>  

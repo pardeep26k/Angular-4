@@ -1,0 +1,194 @@
+{
+	"dashboards": [{
+		"id": "dashboard_1",
+		"name": "Shopping Info 1",
+
+		"children": [{
+			"id": "child_1",
+			"name": "Detail",
+			"filename": "productList.csv",
+			"type": "drilldown",
+			"pages": [{
+
+				"rows": 1,
+				"grid": [{
+						"id": 1,
+						"col": 24,
+						"type": "drilldown",
+						"options": {
+							"chart": {
+								"type": "bar",
+								
+								"backgroundColor": "none",
+								"options3d": {
+									"enabled": true,
+									"alpha": 25,
+									"beta": 15,
+									"depth": 210
+								}
+							},
+							"title": {
+								"text": "Shoping info"
+							},
+							"xAxis": {
+								"type": "category"
+							},
+
+							"legend": {
+								"enabled": false
+							},
+
+							"plotOptions": {
+								"pie": {
+									"depth": 50,
+									"alpha": 15,
+									"beta": 0,
+									"innerSize": "50%"
+								},
+								"column": {
+									"depth": 40,
+									"stacking": true,
+									"grouping": false,
+									"groupZPadding": 10
+								},
+								"series": {
+									"dataLabels": {
+										"enabled": true,
+										"format": "{point.name}: {point.y:.1f}"
+									}
+								}
+							},
+
+							"series": [],
+
+							"drilldown": {
+								"series": []
+							}
+						},
+						"data": "productInfo.csv",
+						"hirarchy": ["Year", "Country", "Domain", "Category"]
+					}
+					
+				]
+			},{
+				
+								"rows": 1,
+								"grid": [{
+										"id": 1,
+										"col": 24,
+										"type": "drilldown",
+										"options": {
+											"chart": {
+												"type": "bar",
+												"backgroundColor": "none",
+												"options3d": {
+													"enabled": true,
+													"alpha": 25,
+													"beta": 15,
+													"depth": 210
+												}
+											},
+											"title": {
+												"text": "Shoping info"
+											},
+											"xAxis": {
+												"type": "category"
+											},
+				
+											"legend": {
+												"enabled": false
+											},
+				
+											"plotOptions": {
+												"pie": {
+													"depth": 50,
+													"alpha": 15,
+													"beta": 0,
+													"innerSize": "50%"
+												},
+												"column": {
+													"depth": 40,
+													"stacking": true,
+													"grouping": false,
+													"groupZPadding": 10
+												},
+												"series": {
+													"dataLabels": {
+														"enabled": true,
+														"format": "{point.name}: {point.y:.1f}"
+													}
+												}
+											},
+				
+											"series": [],
+				
+											"drilldown": {
+												"series": []
+											}
+										},
+										"data": "productInfo.csv",
+										"hirarchy": ["Year", "Country", "Domain", "Category"]
+									}
+									
+								]
+							}]
+		}]
+	}, {
+		"id": "dashboard_2",
+		"name": "Shopping Info 2",
+		"children": [{
+			"id": "child_2",
+			"name": "Detail",
+			
+			"pages": [{
+				"rows": 2,
+				"grid": [{
+					"id": 3,
+					"col": 24,
+					"type": "drilldown",
+					"options": {
+						"chart": {
+							"type": "pie",
+							"backgroundColor": "none",
+							"options3d": {
+								"enabled": true,
+								"alpha": 15,
+								"beta": 15,
+								"depth": 110
+							}
+						},
+						"title": {
+							"text": "Shoping info"
+						},
+						"xAxis": {
+							"type": "category"
+						},
+
+						"legend": {
+							"enabled": true
+						},
+
+						"plotOptions": {
+							"pie": {
+								"depth": 50,
+								"alpha": 15,
+								"beta": 0,
+								"innerSize": "50%"
+							},
+							"series": {
+								"dataLabels": {
+									"enabled": true,
+									"format": "{point.name}: {point.y}"
+								}
+							}
+						},
+						"series": []
+					},
+					"data": "productInfo.csv",
+					"hirarchy": ["Year", "Country", "Domain", "Category"]
+				}]
+			}]
+		}]
+	}]
+
+}

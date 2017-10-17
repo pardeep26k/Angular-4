@@ -1,0 +1,35 @@
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="theme">
+      <ion-title align="center">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="has-header"  color="light" id="menucontent" >
+    <tree-root [nodes]="dashboards" (onActivate)="onDashboardChange($event)" (onInitialized)="onMenuInit()"></tree-root>
+  </ion-content>
+  <ion-footer>
+  <ion-toolbar color="light">
+    
+ <ion-buttons >
+     <button ion-button  (click)="signout()" class="signoutBtn">
+         <ion-icon name="log-out" >   Sign out</ion-icon>
+      </button> </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-footer>
+</ion-menu>
+<ion-footer>
+  <ion-toolbar color="light">
+    <p align="right">
+     © Copyright 2017 Pardeep Kumar.
+    </p>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

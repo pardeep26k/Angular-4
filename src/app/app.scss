@@ -1,0 +1,80 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ $bground : map-get($colors, bground);
+ $fground : map-get($colors, fground);
+ $text :  map-get($colors, text);
+.content{
+  background-color:  $bground;
+}
+.toolbar-background{
+ background-color:   $fground!important;
+}
+
+.tree-item{
+    margin-left: 10px;  
+}
+.selectedItem{
+    background-color :  $fground;
+}
+.tree {
+  width: 300px;
+}
+
+.signoutBtn{
+  color: white!important;
+}
+
+.node-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+   background: map-get($colors, grid);
+}
+tree-node-expander{
+      position: absolute;
+    padding: 10px;
+    right: 0;
+    z-index: 10;
+    width: 50px;
+}
+.node-content-wrapper {
+  flex-grow: 1;
+  position: relative;
+  padding: 10px!important;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pull-right {
+  position: absolute;
+  right: 10px;
+}
+.tree-node{
+    
+    display: block;
+}
+.tree-node-focused{
+     background : none;
+}
+.tree-node-active.tree-node-focused > .node-wrapper > .node-content-wrapper{
+ background-color: $fground!important;
+}
+.node-drop-slot {
+    height: 2px!important;
+    background: none!important;
+}

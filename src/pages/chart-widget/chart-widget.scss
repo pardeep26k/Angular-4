@@ -1,0 +1,24 @@
+chart-widget {
+ ion-card-content {
+    //height: 248px;
+    padding: 5% 0!important;
+ }
+ .toolbar-title-md{
+     color :  $fground;
+
+ }
+ ion-card-header.topHeader{
+     border-bottom: 1px solid $fground!important;
+ }
+ .topHeader{
+     background-color: $fground !important;
+ }
+ 
+ .topHeader button, .toolbar-title-md{
+  color  :$text!important ;
+ }
+ .table-wrapper{
+ 	padding:0!important;
+ }
+ 
+}

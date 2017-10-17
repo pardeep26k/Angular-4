@@ -1,0 +1,36 @@
+chart-viewer {
+   select { 
+           position: absolute;
+            top: 15%;
+            right: 0px;
+            z-index: 99999;
+            display: none;
+            
+   }
+       .dc-select-menu{
+             color: black;
+          //   width: 100px;
+        }
+        .dc-chart .brush rect.extent {
+        fill: #4682b4;
+        fill-opacity: .4;
+        }
+   .axis.x text,row-chart .tick text{
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
+
+.dc-chart text {
+   // fill: #7D8A96;
+}
+.wrapper{
+       height: 100%;  
+        overflow: auto;
+        width: 100%;
+}
+.tableWrapper{
+        width: 100%!important;
+}
+
+
+}

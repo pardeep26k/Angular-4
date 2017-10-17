@@ -1,0 +1,23 @@
+table-chart {
+background: none;
+   .tb-header{
+ 		position: fixed;
+ 		z-index:1;
+ 		width:calc(100% - 40px);
+ 		border-top: 1px $bground solid;
+   }
+   .tb-content{
+   		margin-top: 50px;
+   }
+   .count{
+    position: absolute;
+    z-index: 1;
+    text-align: right;
+    top: -30px;
+    right: 10px;
+
+   }
+   
+
+}
+
